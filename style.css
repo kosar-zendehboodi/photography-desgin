@@ -1,0 +1,468 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.42857143;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  color: #696969;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+  padding: 0px 10px;
+}
+
+hr {
+  width: 100%;
+  color: #6a6868a4;
+  height: 0.5px;
+}
+h4,
+h2,
+h5 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: "Lora", serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+}
+nav > ul > li:hover > a {
+  color: #b14fdf;
+}
+
+nav > ul > li > ul > li:hover,
+nav > ul > li > ul > li:hover a {
+  background-color: #b14fdf;
+  color: white;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+#aboutList,
+#levelList {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 0.25px solid #11111125;
+  margin: 0 auto;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 0;
+  line-height: 2.6;
+  letter-spacing: 1px;
+}
+.humberger-menu {
+  display: none;
+  flex-direction: column;
+}
+.humberger-menu span {
+  width: 25px;
+  padding: 2px;
+  border-top: 3px solid #696969;
+}
+nav li {
+  position: relative;
+}
+nav ul li ul li {
+  border: 0.25px solid #11111125;
+  background-color: #fff;
+  border-top: none;
+}
+nav li ul {
+  position: absolute;
+  display: none;
+  padding-top: 1.5rem;
+  margin-left: -2.7rem;
+}
+nav li ul li {
+  display: none;
+  font-weight: 400;
+  line-height: 1.42857143;
+  padding: 6px;
+}
+nav ul li:hover ul li {
+  display: block;
+}
+nav ul li:hover ul {
+  display: block;
+  min-width: 250px;
+}
+
+.search {
+  /* width: 400px; */
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+input {
+  outline: none;
+  padding: 4px 2px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: 100;
+}
+.search input:focus {
+  border: 0.25px solid #b14fdf;
+}
+.search button {
+  background-color: white;
+  width: 30px;
+  border: 0;
+  box-shadow: none;
+  padding: 20px 0;
+}
+
+.search img {
+  width: 14px;
+}
+
+/* second part of header  */
+.title {
+  padding: 2rem;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-family: "Lora", serif;
+}
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.main img {
+  width: 100%;
+}
+.circleNav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.circleNav div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 2rem;
+  color: #ffffff;
+}
+.circleNav div:last-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.circleNav div:last-of-type span {
+  margin: 0px 0px 5px 5px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  background-color: #ffffffa8;
+}
+
+.circleNav span:hover {
+  background-color: #ffffffd6;
+  cursor: pointer;
+}
+
+.mainDetail {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  column-gap: 2rem;
+  line-height: 2rem;
+}
+.mainDetail div:first-child img {
+  width: 100%;
+}
+.postFormat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.secondary img {
+  width: 300px;
+}
+.aboutme {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left !important;
+}
+.title-text::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 31.8%;
+  height: 2px;
+  width: 40px;
+  margin-left: -20px;
+  background: #b14fdf;
+}
+.title-about::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  bottom: -1px;
+  left: 5.8%;
+  background: #b14fdf;
+}
+
+.title-text,
+.title-about {
+  width: 100px;
+  position: relative;
+  transition: all 1.5s;
+  transform: translate(2);
+  /* border-bottom: 1px solid#11111125; */
+}
+
+/* .title-about:hover, */
+p.title-text:hover,
+.title-about:hover {
+  content: "";
+  color: #ac3daf;
+  cursor: pointer;
+}
+
+/* my gallery */
+.myimage {
+  margin-left: -10rem;
+  display: grid;
+  grid-template-columns: repeat(2, 80%);
+  column-gap: 30px;
+  width: 350px;
+}
+.myimage div a {
+  transform: translate(1);
+  transition: 0.9s linear;
+}
+.myimage img:hover {
+  opacity: 50%;
+}
+.olderbutton {
+  text-align: left;
+}
+/* secondary follow part */
+.follow {
+  text-align: left !important;
+  margin: 2rem 0px;
+}
+.follow div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.follow div i {
+  padding: 6px;
+}
+.titleFollow {
+  position: relative;
+}
+.titleFollow::after {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  height: 2px;
+  width: 40px;
+  margin-left: -4.9rem;
+  background: #b14fdf;
+}
+
+/* recent gallery */
+
+.recentPosts {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: left;
+}
+.recentPosts div {
+  display: flex;
+  flex-direction: row;
+  margin: 4px;
+}
+.recentPosts div div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-wrap: break-word;
+  font-family: "Lora", serif;
+  line-height: 2;
+  font-style: italic;
+  font-size: 16px;
+}
+.titleRecent {
+  position: relative;
+}
+.titleRecent::after {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  height: 3px;
+  width: 40px;
+  margin-left: -4.4rem;
+  background: #b14fdf;
+}
+.postImages {
+  width: 80px;
+  height: 80px;
+  float: left;
+  display: block;
+  background-color: #dadada;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+
+/* search gallery  */
+.searchGallery {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.searchGallery input {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  outline: none;
+  padding: 4px 2px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.searchGallery button {
+  width: 90px;
+  transition: background-color 0.3s linear;
+  background: #f2f2f2;
+  border-color: transparent;
+  color: #696969;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+
+.searchGallery input:focus {
+  border: 0.25px solid #696be5;
+}
+
+.searchGallery button:hover {
+  background-color: #b14fdf;
+  color: #fff;
+}
+
+/* category */
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+}
+.categoryItems {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.categoryItems li {
+  margin-left: -3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.widget-title {
+  position: relative;
+}
+.widget-title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  bottom: -1px;
+  left: 1%;
+  background: #b14fdf;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 2rem;
+  padding: 2rem;
+  font-weight: 400;
+  background-color: #d0cece34;
+}
+.footer div i {
+  padding: 4px 17px;
+}
+
+i {
+  transform: translate(1);
+  transition: 1s all linear;
+  cursor: pointer;
+}
+i:hover {
+  color: #b14fdf;
+}
+
+@media only screen and (max-width: 775px) {
+  nav ul li {
+    display: none;
+  }
+  nav .humberger-menu {
+    display: flex;
+  }
+  .mainDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .postFormat {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .secondary {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .myimage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
