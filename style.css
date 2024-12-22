@@ -45,8 +45,49 @@ nav > ul > li > ul > li:hover a {
   background-color: #b14fdf;
   color: white;
 }
+
+/* //  about scroll up*/
+
+#scrollUp {
+  display: inline-block;
+  background-color: #021d08;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#scrollUp::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#scrollUp:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#scrollUp:active {
+  background-color: #555;
+}
+#scrollUp.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*header desgin*/
 .header {
   display: flex;
+
   flex-direction: column;
 }
 
@@ -78,13 +119,16 @@ nav {
 }
 .humberger-menu {
   display: none;
-  flex-direction: column;
+  cursor: pointer;
 }
 .humberger-menu span {
+  display: block;
   width: 25px;
-  padding: 2px;
-  border-top: 3px solid #696969;
+  height: 3px;
+  margin: 5px;
+  background: #000000;
 }
+
 nav li {
   position: relative;
 }
@@ -150,6 +194,7 @@ input {
   letter-spacing: 1px;
   font-family: "Lora", serif;
 }
+
 .main {
   position: relative;
   display: flex;
@@ -192,6 +237,14 @@ input {
 .circleNav span:hover {
   background-color: #ffffffd6;
   cursor: pointer;
+}
+
+.nav-dots {
+  display: flex;
+  gap: 10px;
+}
+.nav-dots span.active {
+  background-color: red;
 }
 
 .mainDetail {
@@ -465,4 +518,106 @@ i:hover {
     justify-content: center;
     margin: 0 auto;
   }
+
+  .humberger-menu {
+    display: flex; /* Show hamburger menu */
+    flex-direction: column;
+  }
+  .nav-list {
+    display: none; /* Hide the navigation list */
+    flex-direction: column;
+  }
+  .nav-list.active {
+    display: flex; /* Show the navigation list when active */
+  }
+  .nav-list li {
+    margin: 10px 0;
+  }
+  #aboutList,
+  #levelList {
+    display: none; /* Hide the submenus */
+  }
+  li:hover > #aboutList,
+  li:hover > #levelList {
+    display: block; /* Show submenus on hover */
+  }
+  #scrollUp {
+    margin: 30px;
+  }
+}
+
+/* about sale part */
+.cameraSale {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 640px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* مخفی کردن نوار اسکرول */
+}
+
+.slider-item {
+  flex: 0 0 140px; /* هر آیتم ۱۰۰ پیکسل عرض دارد */
+  border: 1px solid #ccc;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.slider-item img {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.product-name {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.product-price {
+  color: rgba(212, 7, 7, 0.926);
+  font-size: 1.1em;
+}
+
+.product-discount {
+  color: green;
+  font-size: 0.1em;
+}
+.add-to-cart {
+  background-color: #0d0d0d;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+.nav-button {
+  background-color: #072a24;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#next {
+  right: 0;
+  padding: 5px 15px;
+  border-radius: 100%;
+  font-size: 30px;
+  transition: all 0.5s ease-in;
+}
+.nav-button:hover {
+  background-color: #072a2458;
+  color: rgb(0, 0, 0);
 }
