@@ -1,19 +1,17 @@
+var btn = $("#scrollUp");
 
-var btn = $('#scrollUp');
-
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
+    btn.addClass("show");
   } else {
-    btn.removeClass('show');
+    btn.removeClass("show");
   }
 });
 
-btn.on('click', function(e) {
+btn.on("click", function (e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  $("html, body").animate({ scrollTop: 0 }, "300");
 });
-
 
 const images = [
   "img/photo-1431578500526-4d9613015464-1920x550.jpg",
@@ -22,9 +20,6 @@ const images = [
   "img/photo-1431578500526-4d9613015464-1920x550.jpg",
   "img/oIpwxeeSPy1cnwYpqJ1w_Dufer-Collateral-test-1920x550.jpg",
 ];
-
-
-
 
 let currentIndex = 0;
 
@@ -53,51 +48,13 @@ dots.forEach((dot, index) => {
 updateSlider(currentIndex);
 setInterval(autoSlide, 5000); // Change image every
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const humbergerMenu = document.querySelector(".humberger-menu");
-//   const navList = document.querySelector(".nav-list");
-
-//   humbergerMenu.addEventListener("click", function () {
-//     navList.classList.toggle("active");
-//   });
-// });
 
 
-dodocument.addEventListener('DOMContentLoaded', function() {
-  var items = document.querySelectorAll('.slider-item');
-  items.forEach(function(item) {
-      item.addEventListener('click', function() {
-          alert('محصول انتخاب شد!');
-      });
-  });
-});
+const slider = document.getElementById("slider");
+const nextButton = document.getElementById("next");
 
-document.addEventListener('DOMContentLoaded', function() {
-  var slider = document.querySelector('.slider');
-  var items = document.querySelectorAll('.slider-item');
-  var currentIndex = 0;
-  var itemsToShow = 4;
-
-  document.getElementById('next').addEventListener('click', function() {
-      if (currentIndex < items.length - itemsToShow) {
-          currentIndex++;
-          updateSlider();
-      }
-  });
-
-  document.getElementById('prev').addEventListener('click', function() {
-      if (currentIndex > 0) {
-          currentIndex--;
-          updateSlider();
-      }
-  });
-
-  function updateSlider() {
-      var offset = -currentIndex * (100 + 20); // ۱۰۰ پیکسل عرض آیتم + ۱۰ پیکسل فاصله در هر طرف
-      slider.style.transform = 'translateX(' + offset + 'px)';
-  }
-
-  updateSlider();
+nextButton.addEventListener("click", () => {
+  slider.scrollBy({ left: 300, behavior: "smooth" });
 });
 
 

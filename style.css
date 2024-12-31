@@ -87,10 +87,15 @@ nav > ul > li > ul > li:hover a {
 /*header desgin*/
 .header {
   display: flex;
-
   flex-direction: column;
 }
 
+.humberger-menu {
+  display: flex;
+}
+.humberger-menu span{
+  border-bottom: #0d0d0d;
+}
 #aboutList,
 #levelList {
   display: flex;
@@ -116,17 +121,6 @@ nav {
   padding: 10px 0;
   line-height: 2.6;
   letter-spacing: 1px;
-}
-.humberger-menu {
-  display: none;
-  cursor: pointer;
-}
-.humberger-menu span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px;
-  background: #000000;
 }
 
 nav li {
@@ -249,7 +243,7 @@ input {
 
 .mainDetail {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 64% 35%;
   column-gap: 2rem;
   line-height: 2rem;
 }
@@ -497,8 +491,10 @@ i:hover {
     display: none;
   }
   nav .humberger-menu {
+    
     display: flex;
   }
+  
   .mainDetail {
     display: flex;
     flex-direction: column;
@@ -549,28 +545,49 @@ i:hover {
 /* about sale part */
 .cameraSale {
   display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
 }
 
 .slider {
   display: flex;
-  overflow: hidden;
-  width: 640px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.slider-item {
+  flex: 0 0 140px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ccc;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .slider::-webkit-scrollbar {
   display: none; /* مخفی کردن نوار اسکرول */
 }
 
-.slider-item {
-  flex: 0 0 140px; /* هر آیتم ۱۰۰ پیکسل عرض دارد */
+/* .slider-item {
+  flex: 0 0 140px;  هر آیتم ۱۰۰ پیکسل عرض دارد 
   border: 1px solid #ccc;
   margin: 10px;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
-}
+} 
+*/
 
 .slider-item img {
   max-width: 80%;
@@ -599,7 +616,7 @@ i:hover {
   cursor: pointer;
   font-size: 0.8em;
 }
-.nav-button {
+/* .nav-button {
   background-color: #072a24;
   color: white;
   border: none;
@@ -608,7 +625,7 @@ i:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-}
+} */
 
 #next {
   right: 0;
@@ -620,4 +637,9 @@ i:hover {
 .nav-button:hover {
   background-color: #072a2458;
   color: rgb(0, 0, 0);
+}
+
+.offer {
+  text-decoration: line-through;
+  opacity: 60%;
 }
